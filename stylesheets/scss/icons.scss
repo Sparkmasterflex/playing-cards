@@ -1,0 +1,30 @@
+@import "mixins";
+
+// Display icon only, no text
+//== icon size 16px
+.icon    { @include icon(16px); }
+.icon-24 { @include icon(24px); } //== icon size 24px
+.icon-32 { @include icon(32px); } //== icon size 32px
+.icon-48 { @include icon(48px); } //== icon size 48px
+.icon-64 { @include icon(64px); } //== icon size 64px
+
+
+// Display icon to left of text
+//== icon size 16px
+.with-icon { @include with-icon(16px); }
+.with-icon-24 { @include with-icon(24px) } //== icon size 24px
+.with-icon-32 { @include with-icon(32px) } //== icon size 32px
+.with-icon-48 { @include with-icon(48px) } //== icon size 48px
+.with-icon-64 { @include with-icon(64px) } //== icon size 64px
+
+// Display icon to right of text
+// == icon size 16px
+.with-icon-right {
+  background-repeat: no-repeat;
+  background-position: right center;
+  padding: 3px 20px 3px 0;
+}
+
+.twitter { background-image: url(/images/icons/twitter.32.png); }
+.tumblr { background-image: url(/images/icons/tumblr.32.png); }
+.linkedin { background-image: url(/images/icons/linkedin.32.png); }

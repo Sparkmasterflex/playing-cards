@@ -1,0 +1,177 @@
+/*======================*\
+     HTML/CSS HACKS
+\*======================*/
+header, section, footer, aside, nav, article, figure {
+  display: block; }
+
+/**
+ * From: http://nicolasgallagher.com/micro-clearfix-hack/
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf {
+  *zoom: 1; }
+  .cf:before, .cf:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */ }
+  .cf:after {
+    clear: both; }
+
+::-moz-selection {
+  background: #333;
+  color: #fff;
+  text-shadow: none; }
+
+::selection {
+  background: #333;
+  color: #fff;
+  text-shadow: none; }
+
+:focus {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+html {
+  -webkit-font-smoothing: antialiased; }
+
+body {
+  background: #050;
+  font-size: 62.5%;
+  font-family: Arial, san-serif;
+  -webkit-animation: reset 1s ease 1;
+  -moz-animation: reset 1s ease 1;
+  -o-animation: reset 1s ease 1;
+  animation: reset 1s ease 1;
+  -webkit-animation: fade-in 1s ease 1;
+  -moz-animation: fade-in 1s ease 1;
+  -o-animation: fade-in 1s ease 1;
+  animation: fade-in 1s ease 1; }
+
+section {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1em 0;
+  *zoom: 1; }
+  section:before, section:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */ }
+  section:after {
+    clear: both; }
+
+h1, .h1 {
+  font-size: 4.8em; }
+
+h2, .h2 {
+  font-size: 3.6em; }
+
+h3, .h3 {
+  font-size: 3.0em; }
+
+h4, .h4 {
+  font-size: 2.4em; }
+
+h5, .h5 {
+  font-size: 2.0em; }
+
+h6, .h6 {
+  font-size: 1.8em; }
+
+p, li, a {
+  font-size: 1.4em;
+  line-height: 1.5em; }
+  p p, p li, p a, li p, li li, li a, a p, a li, a a {
+    font-size: 1em; }
+
+a {
+  font-size: 2em;
+  color: white; }
+
+li ul {
+  padding-left: 1em; }
+
+ul.disc, ol.disc {
+  list-style: disc; }
+ul.numbered, ol.numbered {
+  list-style: decimal; }
+
+strong {
+  font-weight: bold; }
+
+em {
+  font-style: italic; }
+
+.whitebox {
+  background: white;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-box-shadow: 0 0 10px rgba(51, 51, 51, 0.8);
+  -moz-box-shadow: 0 0 10px rgba(51, 51, 51, 0.8);
+  box-shadow: 0 0 10px rgba(51, 51, 51, 0.8); }
+  .whitebox h1, .whitebox h2 {
+    margin-bottom: 0.5em; }
+  .whitebox ul {
+    margin-left: 3em; }
+    .whitebox ul li {
+      font-size: 2em; }
+      .whitebox ul li a {
+        color: #666666; }
+
+/*==============================*\
+            ANIMATIONS
+\*==============================*/
+/*----- reset animation -----*/
+@-webkit-keyframes reset {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 0; } }
+
+@-moz-keyframes reset {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 0; } }
+
+@-o-keyframes reset {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 0; } }
+
+/*----- fade-in animation -----*/
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-moz-keyframes fade-in {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes fade-in {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }

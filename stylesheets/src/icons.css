@@ -1,0 +1,133 @@
+.icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  text-indent: -9999px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: 100% auto;
+  -moz-background-size: 100% auto;
+  -ms-background-size: 100% auto;
+  -o-background-size: 100% auto;
+  background-size: 100% auto; }
+
+.icon-24 {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  text-indent: -9999px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: 100% auto;
+  -moz-background-size: 100% auto;
+  -ms-background-size: 100% auto;
+  -o-background-size: 100% auto;
+  background-size: 100% auto; }
+
+.icon-32 {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  text-indent: -9999px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: 100% auto;
+  -moz-background-size: 100% auto;
+  -ms-background-size: 100% auto;
+  -o-background-size: 100% auto;
+  background-size: 100% auto; }
+
+.icon-48 {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  text-indent: -9999px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: 100% auto;
+  -moz-background-size: 100% auto;
+  -ms-background-size: 100% auto;
+  -o-background-size: 100% auto;
+  background-size: 100% auto; }
+
+.icon-64 {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  text-indent: -9999px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: 100% auto;
+  -moz-background-size: 100% auto;
+  -ms-background-size: 100% auto;
+  -o-background-size: 100% auto;
+  background-size: 100% auto; }
+
+.with-icon {
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding: 4px 0 4px 22px;
+  -webkit-background-size: 16px auto;
+  -moz-background-size: 16px auto;
+  -ms-background-size: 16px auto;
+  -o-background-size: 16px auto;
+  background-size: 16px auto; }
+
+.with-icon-24 {
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding: 6px 0 6px 30px;
+  -webkit-background-size: 24px auto;
+  -moz-background-size: 24px auto;
+  -ms-background-size: 24px auto;
+  -o-background-size: 24px auto;
+  background-size: 24px auto; }
+
+.with-icon-32 {
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding: 8px 0 8px 38px;
+  -webkit-background-size: 32px auto;
+  -moz-background-size: 32px auto;
+  -ms-background-size: 32px auto;
+  -o-background-size: 32px auto;
+  background-size: 32px auto; }
+
+.with-icon-48 {
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding: 12px 0 12px 54px;
+  -webkit-background-size: 48px auto;
+  -moz-background-size: 48px auto;
+  -ms-background-size: 48px auto;
+  -o-background-size: 48px auto;
+  background-size: 48px auto; }
+
+.with-icon-64 {
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding: 16px 0 16px 70px;
+  -webkit-background-size: 64px auto;
+  -moz-background-size: 64px auto;
+  -ms-background-size: 64px auto;
+  -o-background-size: 64px auto;
+  background-size: 64px auto; }
+
+.with-icon-right {
+  background-repeat: no-repeat;
+  background-position: right center;
+  padding: 3px 20px 3px 0; }
+
+.twitter {
+  background-image: url(/images/icons/twitter.32.png); }
+
+.tumblr {
+  background-image: url(/images/icons/tumblr.32.png); }
+
+.linkedin {
+  background-image: url(/images/icons/linkedin.32.png); }

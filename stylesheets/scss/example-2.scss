@@ -1,0 +1,253 @@
+@import "mixins";
+
+.container {
+  width: 75%;
+  margin: 0 auto;
+  padding: 20px;
+  .card {
+    position: relative;
+    width: 160px;
+    height: 224px;
+    margin: 40px 20px;
+    float: left;
+    background: #fff;
+    @include border-radius(5px);
+    .heart, .diamond, .spade, .club { position: absolute; }
+  }
+}
+
+
+.heart, .diamond {
+  .circle, .block { background-color: #900; }
+  .triangle { border-top: 18px solid #900; }
+  span { color: #900; }
+}
+
+.spade, .club {
+  .circle, .block { background-color: #000; }
+  .triangle { border-top: 18px solid #000; }
+  span { color: #000; }
+}
+
+.number {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  span {
+    font-size: 18px;
+    padding: 0 10px;
+  }
+  .heart, .spade, .club, .diamond {
+    -webkit-transform: scale(0.65);
+    transform: scale(0.65);
+  }
+  &.bottom {
+    top: auto;
+    bottom: 5px;
+    left: auto;
+    right: 5px;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+
+.heart, .spade, .club, .diamond {
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+
+.center {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  margin-left: -15px;
+  &.bottom {
+    top: auto;
+    bottom: 10px;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+
+.heart, .spade {
+  .circle {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 9px;
+    &:first-child { left: 0; }
+    &:nth-child(2) { right: 0; }
+  }
+  .triangle {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: {
+      left: 15px solid transparent;
+      right: 15px solid transparent;
+    }
+  }
+}
+.heart .circle { top: 0; }
+.spade {
+  .spade-top {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: scale(0.8) rotate(180deg);
+    transform: scale(0.8) rotate(180deg);
+  }
+  .spade-bottom {
+    .circle {
+      top: auto;
+      bottom: -1px;
+      z-index: 2;
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+      background: #fff;
+      &:first-child { left: 4px; }
+      &:nth-child(2) { right: 4px; }
+    }
+    .bar {
+      position: absolute;
+      bottom: -4px;
+      left: 50%;
+      margin-left: -5px;
+      width: 10px;
+      height: 16px;
+      background: #000;
+    }
+  }
+}
+
+.club {
+  .club-top {
+    position: relative;
+    height: 24px;
+    z-index: 10;
+    .circle {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      background-color: #000;
+      border-radius: 6px;
+      &:first-child {
+        left: 50%;
+        margin-left: -6px;
+      }
+      &:nth-child(2),
+      &:last-child {
+        bottom: 1px;
+      }
+      &:nth-child(2) { left: 1px; }
+      &:last-child { right: 1px; }
+    }
+  }
+  .club-bottom {
+    position: relative;
+    .bar {
+      position: absolute;
+      background: #000;
+      width: 16px;
+      height: 18px;
+      top: -13px;
+      left: 50%;
+      margin-left: -8px;
+    }
+    .circle {
+      position: absolute;
+      top: -16px;
+      z-index: 2;
+      width: 18px;
+      height: 18px;
+      border-radius: 10px;
+      background: #fff;
+      &:first-child { left: -5px; }
+      &:nth-child(2) { right: -5px; }
+    }
+  }
+}
+
+.diamond {
+  .triangle {
+    position: absolute;
+    border: {
+      top: 17px solid #900;
+      right: 14px solid transparent;
+      left: 14px solid transparent;
+    }
+    &:first-child {
+      top: -17px;
+      border: {
+        top: 17px solid transparent;
+        bottom: 17px solid #900;
+      }
+    }
+    &:last-child { bottom: -4px; }
+  }
+}
+
+
+.value-2 {
+  .body-1, .body-2 { left: 50%; margin-left: -15px; }
+  .body-1 { top: 10%; }
+  .body-2 { bottom: 10%; @include rotate(180deg); }
+}
+
+.value-3 {
+  .body-1, .body-2, .body-3 { left: 50%; margin-left: -15px; }
+  .body-1 { top: 10%; }
+  .body-2 { top: 43%; }
+  .body-3 { bottom: 10%; @include rotate(180deg); }
+}
+
+.value-4,
+.value-5 {
+  .body-1, .body-2 { left: 23%; }
+  .body-3, .body-4 { right: 23%; }
+  .body-1, .body-3 { top: 10%; }
+  .body-2, .body-4 { bottom: 10%; @include rotate(180deg); }
+  // only for .value-5
+  .body-5 {
+    top: 43%;
+    left: 50%;
+    margin-left: -15px;
+  }
+}
+
+.value-6,
+.value-7,
+.value-8 {
+  .body-1, .body-2, .body-3 { left: 23%; }
+  .body-4, .body-5, .body-6 { right: 23%; }
+  .body-1, .body-4 { top: 15%; }
+  .body-2, .body-5 { top: 43%; }
+  .body-3, .body-6 { bottom: 15%; @include rotate(180deg); }
+
+  .body-7, .body-8 { left: 50%; margin-left: -15px; }
+  .body-7 { top: 28%; }
+  .body-8 { bottom: 28%; @include rotate(180deg); }
+}
+
+.value-9,
+.value-10 {
+  .body-1, .body-2, .body-3, .body-4 { left: 23%; }
+  .body-5, .body-6, .body-7, .body-8 { right: 23%; }
+  .body-1, .body-5 { top: 10%; }
+  .body-2, .body-6 { top: 32%; }
+  .body-3, .body-7 { bottom: 32%; @include rotate(180deg); }
+  .body-4, .body-8 { bottom: 10%; @include rotate(180deg); }
+
+  .body-9, .body-10 { left: 50%; margin-left: -15px; }
+}
+
+.value-9 .body-9 { top: 43%; }
+.value-10 {
+  .body-9 { top: 20%; }
+  .body-10 { bottom: 20%; @include rotate(180deg); }
+}

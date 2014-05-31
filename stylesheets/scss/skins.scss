@@ -1,0 +1,20 @@
+@import "mixins";
+
+/*========================*\
+         TEXT COLOR
+\*========================*/
+.grey    { color: $grey; }
+.grey-dk { color: $grey-dk; }
+.grey-lt { color: $grey-lt; }
+.black   { color: $black; }
+.white   { color: $white; }
+
+
+/*========================*\
+          BG COLOR
+\*========================*/
+.grey-bg    { background-color: $grey; }
+.grey-dk-bg { background-color: $grey-dk; }
+.grey-lt-bg { background-color: $grey-lt; }
+.black-bg   { background-color: $black; }
+.white-bg   { background-color: $white; }

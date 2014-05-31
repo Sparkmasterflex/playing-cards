@@ -1,0 +1,89 @@
+@import "mixins";
+
+.flip-wrapper {
+  position: relative;
+  width: 160px;
+  height: 224px;
+  margin: 40px 20px;
+  float: left;
+  -webkit-perspective: 800px;
+     -moz-perspective: 800px;
+      -ms-perspective: 800px;
+       -o-perspective: 800px;
+          perspective: 800px;
+}
+
+.flip {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  cursor: pointer;
+  .flip-transform {
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    @include preserve-3d;
+    @include transition(all, 0.5s, ease-in-out);
+  }
+  &.face-down .flip-transform {
+    -webkit-transform: rotateY(180deg);
+       -moz-transform: rotateY(180deg);
+        -ms-transform: rotateY(180deg);
+         -o-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+    @include preserve-3d;
+  }
+}
+
+.card.flip-front {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 160px;
+  height: 224px;
+  @include backface-visibility;
+}
+.flip-back {
+  display: block;
+  position: absolute;
+  width: 160px;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  padding: 10px 0 5px;
+  background: #fff;
+  @include preserve-3d;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+       -o-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transform: rotateY(180deg);
+     -moz-transform: rotateY(180deg);
+      -ms-transform: rotateY(180deg);
+       -o-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  @include backface-visibility;
+  text-align: center;
+  img { height: 200px; width: 140px; }
+}
+
+.flip-front, .flip-back {
+  border-radius: 5px;
+  border: 1px solid #bbb;
+  box-shadow: 0 0 10px rgba(#000, 0.5);
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  .card {
+    background: #fff;
+    .heart, .diamond, .spade, .club { position: absolute; }
+  }
+}
+
+.font-36 { font-size: 36px; }

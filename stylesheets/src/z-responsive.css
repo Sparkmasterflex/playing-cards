@@ -1,0 +1,18 @@
+@media screen and (max-width: 1024px) {
+  .landscape-show {
+    display: block; }
+
+  .landscape-hide {
+    display: none; } }
+@media screen and (max-width: 768px) {
+  .portrait-show {
+    display: block; }
+
+  .portrait-hide {
+    display: none; } }
+@media screen and (max-width: 600px) {
+  .mobile-show {
+    display: block; }
+
+  .mobile-hide {
+    display: none; } }

@@ -1,0 +1,162 @@
+.container {
+  margin: 0 auto;
+  padding: 20px; }
+  .container .card {
+    float: left;
+    position: relative;
+    width: 160px;
+    height: 200px;
+    margin: 40px 20px;
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #bbb;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
+
+.heart .circle, .heart .block, .diamond .circle, .diamond .block {
+  background-color: #900; }
+.heart .triangle, .diamond .triangle {
+  border-top: 18px solid #900; }
+.heart span, .diamond span {
+  color: #900; }
+
+.spade .circle, .spade .block, .club .circle, .club .block {
+  background-color: #000; }
+.spade .triangle, .club .triangle {
+  border-top: 18px solid #000; }
+.spade span, .club span {
+  color: #000; }
+
+.number {
+  position: absolute;
+  top: 5px;
+  left: 5px; }
+  .number span {
+    font-size: 16px;
+    padding: 0 10px; }
+  .number .heart, .number .spade, .number .club, .number .diamond {
+    -webkit-transform: scale(0.65);
+    transform: scale(0.65); }
+  .number.bottom {
+    top: auto;
+    bottom: 5px;
+    left: auto;
+    right: 5px;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg); }
+
+.heart, .spade, .club, .diamond {
+  position: relative;
+  width: 30px;
+  height: 30px; }
+
+.center {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  margin-left: -15px; }
+  .center.bottom {
+    top: auto;
+    bottom: 10px;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg); }
+
+.heart .circle, .spade .circle {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 9px; }
+  .heart .circle:first-child, .spade .circle:first-child {
+    left: 0; }
+  .heart .circle:nth-child(2), .spade .circle:nth-child(2) {
+    right: 0; }
+.heart .triangle, .spade .triangle {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent; }
+
+.heart .circle {
+  top: 0; }
+
+.spade .spade-top {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(0.6) rotate(180deg);
+  transform: scale(0.6) rotate(180deg); }
+.spade .spade-bottom .circle {
+  top: auto;
+  bottom: 0;
+  z-index: 2;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background: #fff; }
+  .spade .spade-bottom .circle:first-child {
+    left: 4px; }
+  .spade .spade-bottom .circle:nth-child(2) {
+    right: 4px; }
+.spade .spade-bottom .bar {
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  margin-left: -5px;
+  width: 10px;
+  height: 12px;
+  background: #000; }
+
+.club .club-top {
+  position: relative;
+  height: 24px;
+  z-index: 10; }
+  .club .club-top .circle {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #000;
+    border-radius: 6px; }
+    .club .club-top .circle:first-child {
+      left: 50%;
+      margin-left: -6px; }
+    .club .club-top .circle:nth-child(2), .club .club-top .circle:last-child {
+      bottom: 1px; }
+    .club .club-top .circle:nth-child(2) {
+      left: 1px; }
+    .club .club-top .circle:last-child {
+      right: 1px; }
+.club .club-bottom {
+  position: relative; }
+  .club .club-bottom .bar {
+    position: absolute;
+    background: #000;
+    width: 16px;
+    height: 18px;
+    top: -13px;
+    left: 50%;
+    margin-left: -8px; }
+  .club .club-bottom .circle {
+    position: absolute;
+    top: -16px;
+    z-index: 2;
+    width: 18px;
+    height: 18px;
+    border-radius: 10px;
+    background: #fff; }
+    .club .club-bottom .circle:first-child {
+      left: -5px; }
+    .club .club-bottom .circle:nth-child(2) {
+      right: -5px; }
+
+.diamond {
+  margin-top: -15px; }
+  .diamond .triangle {
+    border-top: 17px solid #900;
+    border-right: 14px solid transparent;
+    border-left: 14px solid transparent; }
+    .diamond .triangle:first-child {
+      border-top: 17px solid transparent;
+      border-bottom: 17px solid #900; }
